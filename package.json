@@ -2,6 +2,11 @@
   "name": "utp-native-prebuilds-nodejs-mobile",
   "version": "1.7.1-2",
   "description": "utp-native prebuilt for nodejs-mobile",
+  "scripts": {
+    "clean": "rm -rf utp-native prebuilds",
+    "build-ios": "./build-ios-arm64.sh",
+    "build": "npm run clean && npm run build-ios"
+  },
   "contributors": [
     "Jim Pick (@jimpick)",
     "Mathias Buus (@mafintosh)"
@@ -9,5 +14,9 @@
   "license": "MIT",
   "dependencies": {
     "node-gyp-build": "^3.4.0"
+  },
+  "devDependencies": {
+    "nodejs-mobile-gyp": "^0.1.1",
+    "nodejs-mobile-react-native": "^0.1.4"
   }
 }

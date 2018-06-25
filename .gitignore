@@ -1,4 +1,6 @@
 node_modules
 prebuilds
 package-lock.json
-
+nodejs-assets
+utp-native
+yarn.lock
