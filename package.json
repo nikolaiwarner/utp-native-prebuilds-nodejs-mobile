@@ -1,0 +1,13 @@
+{
+  "name": "utp-native-prebuilds-nodejs-mobile",
+  "version": "1.7.1-2",
+  "description": "utp-native prebuilt for nodejs-mobile",
+  "contributors": [
+    "Jim Pick (@jimpick)",
+    "Mathias Buus (@mafintosh)"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "node-gyp-build": "^3.4.0"
+  }
+}
