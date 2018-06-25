@@ -1,9 +1,11 @@
 # utp-native-prebuilds-nodejs-mobile
 
-scripts to regenerate prebuilds for utp-native for nodejs-mobile
+Contains prebuilt native libraries for use with nodejs-mobile
+
+## Development
 
 Use `npm run build` to regenerate prebuilt binaries in prebuilds directory.
 
-# License
+## License
 
 MIT
