@@ -1,10 +1,10 @@
 {
   "name": "utp-native-prebuilds-nodejs-mobile",
-  "version": "1.7.1-4",
+  "version": "1.7.1-5",
   "description": "utp-native prebuilt for nodejs-mobile",
   "scripts": {
     "clean": "rm -rf utp-native prebuilds",
-    "build-ios": "./build-ios-arm64.sh",
+    "build-ios": "./build-ios-arm64.sh && ./build-ios-x64.sh",
     "build": "npm run clean && npm run build-ios"
   },
   "contributors": [
