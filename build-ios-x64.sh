@@ -21,20 +21,8 @@ if [ ! -d utp-native ]; then
 fi
 
 pushd utp-native
-
-rm -rf node_modules/prebuildify
 UTP_NATIVE=1 npm install
-
-pushd node_modules
-rm -rf prebuildify
-git clone git@github.com:jimpick/prebuildify.git
-pushd prebuildify
-git checkout ios
-popd
-popd
-
 npx prebuildify --strip --platform=ios --arch=x64 --target=node@8.0.0
-
 popd
 
 tar cf - -C utp-native prebuilds | tar xvf -
