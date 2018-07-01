@@ -55,7 +55,7 @@ export CC="$TOOLCHAIN/bin/i686-linux-android-clang"
 export CXX="$TOOLCHAIN/bin/i686-linux-android-clang++"
 export LINK="$TOOLCHAIN/bin/i686-linux-android-clang++"
 export GYP_DEFINES="target_arch=x86 v8_target_arch=ia32 android_target_arch=x86 host_os=mac OS=android"
-export PREBUILD_ARCH=x86
+export PREBUILD_ARCH=ia32
 export PREBUILD_PLATFORM=android
 export PREBUILD_NODE_GYP="$NODEJS_MOBILE_GYP_BIN_FILE"
 
@@ -65,7 +65,7 @@ fi
 
 pushd utp-native
 UTP_NATIVE=1 npm install
-npx prebuildify --strip --platform=android --arch=x86 --target=node@8.0.0
+npx prebuildify --strip --platform=android --arch=ia32 --target=node@8.0.0
 popd
 
 tar cf - -C utp-native prebuilds | tar xvf -
