@@ -21,6 +21,7 @@ if [ ! -d utp-native ]; then
 fi
 
 pushd utp-native
+rm -rf node_modules/prebuildify
 UTP_NATIVE=1 npm install
 npx prebuildify --strip --platform=ios --arch=x64 --target=node@8.0.0
 popd
