@@ -21,9 +21,10 @@ if [ ! -d utp-native ]; then
 fi
 
 pushd utp-native
+npm run fetch-libutp
 rm -rf node_modules/prebuildify
 UTP_NATIVE=1 npm install
-npx prebuildify --strip --platform=ios --arch=arm64 --target=node@8.0.0
+npx prebuildify --strip --platform=ios --arch=arm64 --target=node@10.0.0
 popd
 
 tar cf - -C utp-native prebuilds | tar xvf -
